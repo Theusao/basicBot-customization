@@ -1,12 +1,12 @@
 (function () {
 
     function extend() {
-            if (!window.bot) {
+        if (!window.bot) {
             return setTimeout(extend, 1 * 1000);
         }
 
         var bot = window.bot;
-
+        
         bot.retrieveSettings();
 
         bot.commands.cookieCommand.cookies =['deu-lhe um biscoito de chocolate!',
@@ -54,15 +54,16 @@
             }
         };
         
-        
         bot.loadChat();
     }
 
-    
-    localStorage.setItem("basicBotsettings", JSON.stringify({
-        botName: "FarofinhaBot",
+        localStorage.setItem("basicBotsettings", JSON.stringify({
+        botName: "Farofinha Bot",
         language: "portuguese",
         chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/pt.json",
+        startupCap: 1,
+        startupVolume: 0,
+        startupEmoji: false,
         maximumAfk: 60,
         afkRemoval: true,
         maximumDc: 60,
@@ -72,10 +73,12 @@
         maximumLocktime: 10,
         cycleGuard: true,
         maximumCycletime: 10,
+        voteSkip: true,
+        voteSkipLimit: 10,
         timeGuard: true,
-        maximumSongLength: 10,
-        autodisable: false,
-        commandCooldown: 3,
+        maximumSongLength: 8.30,
+        autodisable: true,
+        commandCooldown: 30,
         usercommandsEnabled: true,
         lockskipPosition: 3,
         lockskipReasons: [
@@ -94,17 +97,21 @@
         motd: "!roulette",
         filterChat: false,
         etaRestriction: true,
-        welcome: false,
+        welcome: true,
         opLink: null,
         rulesLink: null,
         themeLink: null,
-        fbLink: "https://www.facebook.com/DivasdaDepressao",
+        fbLink: "https://www.facebook.com/groups/farofadasdivaspop/",
         youtubeLink: null,
-        website: "https://www.facebook.com/DivasdaDepressao",
+        website: "https://www.facebook.com/farofadasdivaspop",
         intervalMessages: [],
         messageInterval: 5,
         songstats: false,
-        commandLiteral: "!"
+        commandLiteral: "!",
+        blacklists: {
+            NSFW: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
+            OP: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/ExampleOPlist.json"
+        }
     }));
 
     $.getScript('https://rawgit.com/Yemasthui/basicBot/master/basicBot.js', extend);
