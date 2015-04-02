@@ -56,20 +56,31 @@
         
         bot.loadChat();
     }
-
+     spam: [
+                'hueh', 'hu3', 'brbr', 'heu', 'brbr', 'kkkk', 'spoder', 'mafia', 'zuera', 'zueira',
+                'zueria', 'aehoo', 'aheu', 'alguem', 'algum', 'viado', 'zoeira', 'fuckadmins', 'affff', 'vaisefoder', 'huenaarea',
+                'hitler', 'ashua', 'ahsu', 'ashau', 'lulz', 'huehue', 'hue', 'huehuehue', 'merda', 'pqp', 'puta', 'mulher', 'pula', 'retarda', 'caralho', 'filha', 'ppk',
+                'gringo', 'fuder', 'foder', 'hua', 'ahue', 'modafuka', 'modafoka', 'mudafuka', 'mudafoka', 'ooooooooooooooo', 'foda'
+            ],
+            curses:[
+                'nigger', 'faggot', 'nigga', 'niqqa', 'motherfucker', 'modafocka'
+            ]
+        },
+        connectAPI: function () {
+            this.proxy = {
         localStorage.setItem("basicBotsettings", JSON.stringify({
         botName: "Sejam bem vindos a sala mais badalada do Plug.dj",
         language: "portuguese",
         chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/pt.json",
         startupCap: 1,
         startupVolume: 0,
-        startupEmoji: false,
+        startupEmoji: true,
         maximumAfk: 60,
         afkRemoval: true,
         maximumDc: 60,
         bouncerPlus: true,
         lockdownEnabled: false,
-        lockGuard: false,
+        lockGuard: true,
         maximumLocktime: 10,
         cycleGuard: true,
         maximumCycletime: 10,
@@ -95,7 +106,7 @@
         motdEnabled: true,
         motdInterval: 8,
         motd: "!roulette",
-        filterChat: false,
+        filterChat: true,
         etaRestriction: true,
         welcome: true,
         opLink: null,
@@ -104,7 +115,7 @@
         fbLink: "null",
         youtubeLink: null,
         website: "null",
-        intervalMessages: [],
+        intervalMessages: [Olá, %u bem vindo infeliz e volte sempre arrombado :point_right: :ok_hand: >>> LEIA A DESCRIÇÃO.],
         messageInterval: 5,
         songstats: false,
         commandLiteral: "!",
